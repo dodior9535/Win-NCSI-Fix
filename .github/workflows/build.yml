@@ -1,0 +1,41 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Publish
+        run: |
+          dotnet publish src/WinNcsiFix/WinNcsiFix.csproj `
+            -c Release `
+            -r win-x64 `
+            --self-contained true `
+            /p:PublishSingleFile=true
+
+      - name: Create SHA256
+        shell: pwsh
+        run: |
+          $file="src\WinNcsiFix\bin\Release\net8.0-windows\win-x64\publish\WinNcsiFix.exe"
+          (Get-FileHash $file -Algorithm SHA256).Hash | Out-File WinNcsiFix.sha256.txt
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            src/WinNcsiFix/bin/Release/net8.0-windows/win-x64/publish/WinNcsiFix.exe
+            WinNcsiFix.sha256.txt
